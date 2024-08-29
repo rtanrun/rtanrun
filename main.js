@@ -26,7 +26,7 @@ bgmSound.src = "./sounds/bgm.mp3";
 const scoreSound = new Audio(); // 점수 획득 소리
 scoreSound.src = "./sounds/score.mp3";
 const defeatSound = new Audio(); // 게임 오버 소리
-defeatSound.src = "./sounds/defeat2.mp3";
+defeatSound.src = "./sounds/defeat1.mp3";
 
 /** 이미지 객체 생성 및 설정 */
 // (1) 배경
@@ -52,7 +52,7 @@ const rtanCrashImage = new Image();
 rtanCrashImage.src = "./images/rtan_crash.png";
 // (8) 장애물
 const obstacleImage = new Image();
-obstacleImage.src = "./images/obstacle2.png";
+obstacleImage.src = "./images/obstacle1.png";
 
 /** 1-1 르탄이 그리기 */
 const RTAN_WIDTH = 100; // 르탄이 가로 너비
