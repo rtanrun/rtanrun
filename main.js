@@ -6,7 +6,7 @@ const ctx = canvas.getContext("2d"); // 2D 렌더링
 
 /** 게임 상태 변수 */
 let gameStarted = false; // 게임 시작 여부
-const BG_MOVING_SPEED = 3; // 배경 이동 속도
+const BG_MOVING_SPEED = 5; // 배경 이동 속도
 let bgX = 0; // 배경 X 좌표
 let scoreText = document.getElementById("score"); // 점수 표시 요소
 let score = 0; // 현재 점수
@@ -16,7 +16,7 @@ let timer = 0; // 장애물 생성 시간
 let obstacleArray = []; // 장애물 배열
 let gameOver = false; // 게임 종료 여부
 let jump = false; // 점프 여부
-let jumpSpeed = 3; // 점프 속도
+let jumpSpeed = 4; // 점프 속도
 
 /** 오디오 객체 생성 및 설정 */
 const jumpSound = new Audio(); // 점프 소리
@@ -72,7 +72,7 @@ const rtan = {
             ctx.drawImage(rtanCrashImage, this.x, this.y, this.width, this.height);
         } else {
             // 달리는 애니메이션 구현
-            if (timer % 60 > 30) {
+            if (timer % 40 > 20) {
                 ctx.drawImage(rtanAImage, this.x, this.y, this.width, this.height);
             } else {
                 ctx.drawImage(rtanBImage, this.x, this.y, this.width, this.height);
@@ -86,7 +86,7 @@ const rtan = {
 const OBSTACLE_WIDTH = 50; // 장애물 너비
 const OBSTACLE_HEIGHT = 50; // 장애물 높이
 const OBSTACLE_FREQUENCY = 90; // 장애물 생성 빈도
-const OBSTACLE_SPEED = 4; // 장애물 이동 속도
+const OBSTACLE_SPEED = 5; // 장애물 이동 속도
 
 /** 장애물 클래스 정의 */
 class Obstacle {
